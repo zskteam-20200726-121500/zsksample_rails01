@@ -1,4 +1,4 @@
 User.create!(
-  name: "my name",
-  content: "hello!",
+  name: 'my name',
+  content: 'hello!'
 )

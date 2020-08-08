@@ -27,7 +27,7 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: zsksample_rails01_development
+  database: zsksample
   username: postgres
   password: postgres
   # See: https://stackoverflow.com/questions/59089991/ruby-2-6-5-and-postgresql-pg-gem-segmentation-fault

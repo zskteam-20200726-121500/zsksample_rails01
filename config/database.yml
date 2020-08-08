@@ -15,14 +15,11 @@
 # gem 'pg'
 #
 default: &default
-  username: zsksample_rails01
-  password:
-  host: localhost
   adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  encoding: unicode
 
 development:
   <<: *default
@@ -61,7 +58,7 @@ development:
 test:
   <<: *default
   host: <%= ENV['RAILS_DATABASE_HOST'] || 'localhost' %>
-  database: zsksample_rails01_test
+  database: zsksample_test
   username: postgres
   password: postgres
   # See: https://stackoverflow.com/questions/59089991/ruby-2-6-5-and-postgresql-pg-gem-segmentation-fault
@@ -90,4 +87,4 @@ production:
   <<: *default
   database: zsksample_rails01_production
   username: zsksample_rails01
-  password: <%= ENV['ZSKSAMPLE_RAILS01_DATABASE_PASSWORD'] %>
+  password: <%= ENV['ZSKSAMPLE_DATABASE_PASSWORD'] %>

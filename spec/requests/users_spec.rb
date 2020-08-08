@@ -2,17 +2,11 @@ require 'rails_helper'
 
 RSpec.describe '/users', type: :request do
   let(:valid_attributes) do
-    {
-      name: 'テストユーザー',
-      email: 'sample@example.com'
-    }
+    { name: 'テストユーザー', email: 'sample@example.com' }
   end
 
   let(:invalid_attributes) do
-    {
-      name: nil,
-      email: 'sample@example.com'
-    }
+    { name: nil, email: 'sample@example.com' }
   end
 
   describe 'GET /index' do
@@ -77,8 +71,8 @@ RSpec.describe '/users', type: :request do
   describe 'PATCH /update' do
     context 'with valid parameters' do
       let(:new_attributes) do
+        { name: 'テストユーザー１', email: 'sample1@example.com' }
       end
-      { name: 'テストユーザー１', email: 'sample1@example.com' }
 
       it 'updates the requested user' do
         user = User.create! valid_attributes

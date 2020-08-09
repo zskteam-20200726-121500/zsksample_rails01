@@ -6,5 +6,5 @@ FactoryBot.define do
   factory :example, class: Micropost do
     user_id { 2 }
     content { 'sample' }
- end
+  end
 end

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :micropost do
-    content { "MyText" }
+    content { 'MyText' }
     user_id { 1 }
   end
 end

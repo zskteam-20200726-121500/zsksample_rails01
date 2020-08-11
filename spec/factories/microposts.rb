@@ -7,7 +7,6 @@ FactoryBot.define do
     user_id { 2 }
     content { 'sample' }
   end
-
   factory :micropost do
     content { 'sample content' }
     user_id { 1 }

@@ -10,7 +10,7 @@ FactoryBot.define do
 
   factory :micropost do
     content { 'sample content' }
-    association :user
+    user_id { 1 }
 
     trait :over_140 do
       content { 'a' * 141 }

@@ -21,6 +21,18 @@
     <%= form.number_field :user_id %>
   </div>
 
+  <% if micropost.image.attached? %>
+    <p>
+      <strong>Image:</strong>
+      <%= image_tag micropost.image %>
+    </p>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
